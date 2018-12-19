@@ -9,5 +9,7 @@
 <entry domain="MMC" prepath="C:/Users/J.A/AppData/Local/ABB Industrial IT/Robotics IT/RobotWare/RobotWare_6.06.1025/language/install/../" postpath="/controller/cfg/cir_mmc_cfgtext.xml"/>
 <entry domain="SYS" prepath="C:/Users/J.A/AppData/Local/ABB Industrial IT/Robotics IT/RobotWare/RobotWare_6.06.1025/language/install/../" postpath="/controller/cfg/cir_sys_st_cfgtext.xml"/>
 <entry domain="EIO" prepath="C:/Users/J.A/AppData/Local/ABB Industrial IT/Robotics IT/RobotWare/RobotWare_6.06.1025/options/enms/language/" postpath="/en_cfgtext.xml"/>
+<entry domain="EIO" prepath="C:/Users/J.A/AppData/Local/ABB Industrial IT/Robotics IT/RobotWare/RobotWare_6.06.1025/options/dnmss/language/" postpath="/dn_master_cfgtext.xml"/>
+<entry domain="EIO" prepath="C:/Users/J.A/AppData/Local/ABB Industrial IT/Robotics IT/RobotWare/RobotWare_6.06.1025/options/dnmss/language/" postpath="/dn_slave_cfgtext.xml"/>
 <entry domain="SIO" prepath="C:/Users/J.A/AppData/Local/ABB Industrial IT/Robotics IT/RobotWare/RobotWare_6.06.1025/options/rse/language/" postpath="/rse_cfgtext.xml"/>
 </cfgtext_registry>
