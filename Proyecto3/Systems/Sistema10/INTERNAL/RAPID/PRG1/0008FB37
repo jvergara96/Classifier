@@ -1,0 +1,50 @@
+MODULE Module1
+		VAR bool i:=FALSE;
+        CONST robtarget RuedaTrasera1_Pos2:=[[710,60,695],[0.707106781,0.707106781,0,0],[-2,-1,0,7],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	    VAR robtarget RT1_P2;
+        
+    PROC Atornilla()
+        RT1_P2:=RelTool(RuedaTrasera1_Pos2,0,0,-25);
+            
+            SetDO ActivaMano_Juan,0;
+            SetDO ActivaMano_Juan,1;            
+            WaitRob \ZeroSpeed;
+        SetDO ActivaMano_Juan,0;
+        MoveL RuedaTrasera1_Pos2,v100,z100,Mano_de_Juan\WObj:=wobj0;
+            WaitRob \ZeroSpeed;
+            WaitRob \ZeroSpeed;
+            SetDO ActivaMano_Juan,1;
+        MoveL RuedaTrasera1_Pos2,v100,z100,Mano_de_Juan\WObj:=wobj0;
+            WaitRob \ZeroSpeed;
+            SetDO ActivaMano_Juan,0;         
+	ENDPROC
+    
+PROC INICIO()
+    
+        IF i=FALSE THEN 
+        SetDO Cinta_on,0;
+        WaitTime 1;
+        SetDO Cinta_on,1;
+        i:=TRUE;
+        ENDIF 
+     
+ENDPROC
+ 
+    PROC main()
+              
+        SetDO Montaje_fin,1;
+        SetDO Montaje_fin,0;
+        INICIO;    
+        WaitDI PiezaColocada,0;
+        WaitDI PiezaColocada,1;
+        Atornilla;
+        WaitTime 1;
+        SetDO  Montaje_fin,1;       
+        WaitDI Sensor_cinta10,0;  
+        SetDO  Montaje_fin,0;
+        
+
+    
+    ENDPROC
+    
+ENDMODULE
